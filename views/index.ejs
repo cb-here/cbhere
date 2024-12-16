@@ -1,0 +1,69 @@
+<%- include ('./partials/header') %>
+<section class="h-screen  flex items-center justify-center px-8 z-0" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-center space-y-6 animate-fade-in">
+            <h1 class="text-3xl md:text-5xl font-bold bg-yellow-200">
+                Chandrabhushan Vishwakarma
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+                I’m a passionate developer with a love for crafting seamless and modern web experiences. I focus on
+                writing clean, efficient, and scalable code to bring ideas to life.
+            </p>
+            <div class="mb-20">
+                <img src="me.webp" alt="No way"
+                    class="rounded-full border-4 border-blue-500 mx-auto w-40 md:w-52 shadow-lg">
+            </div>
+            <div class="">
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                    <div class="animate-bounce" style="animation-delay: 5s;">
+                      <svg
+                        class="w-8 h-8 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="py-10 mb-10 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-xl font-semibold text-gray-900">Selected Projects</h2>
+                <p class="text-gray-500 mt-2">2019 – 2024</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <% const colors = ['bg-pink-100', 'bg-blue-100', 'bg-gradient-to-r from-blue-200 to-blue-300', 'bg-green-100', 'bg-yellow-100']; %>
+                <% projects.forEach((project, index) => { %>
+                    <div class="relative overflow-hidden group" data-aos="fade-up" data-aos-delay="250">
+                        <div class="h-96  <%= colors[index % colors.length] %> flex items-center justify-center">
+                            <img src="<%= project.projectImage %>" alt="Project Image" width="300" height="200"
+                                class="max-w-full shadow-lg group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-4">
+                            <span class="self-end bg-white text-xs font-semibold py-1 px-2 rounded shadow uppercase">
+                                <%= project.typeOfProject %>
+                            </span>
+                        </div>
+                        
+                        <div class="text-black mt-6 text-center md:text-justify">
+                            <div class="mb-3">
+                                <a href="" class="bg-green-300 px-[10px] py-[5px] rounded">Source</a>
+                            </div>
+                            <p class="text-2xl font-semibold mb-2"><%= project.title %></p>
+                            <p class="text-xl opacity-70"><%= project.description %></p>
+                        </div>
+                    </div>
+                <% } )%>
+            </div>
+        </div>
+    </section>
+    
+<%- include ('./partials/footer') %>

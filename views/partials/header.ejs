@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+<nav class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-md">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="/" class="text-4xl font-bold text-gray-800">
+        cbhere<span class="text-blue-700">.</span>
+      </a>
+      <div class="hidden md:flex space-x-8 items-center mr-6">
+        <a href="/#projects"
+                class="text-xl font-semibold relative after:content-[''] after:block after:absolute after:h-[3px]
+            after:rounded-full after:w-3 after:bg-green-600 after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-1/2 transition-all duration-500">
+                Projects
+            </a>
+            <a href="/about"
+            class="text-xl hover:bg-green-200 rounded-3xl p-3 font-semibold transition-all duration-500">About</a>
+            <a href=""
+            class="text-xl font-semibold bg-gray-700 uppercase text-white p-3 rounded-sm hover:bg-gray-900 transition-all duration-500">Download
+            CV</a>
+      </div>
+  
+      <button id="menu-toggle" class="md:hidden flex items-center text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-md">
+      <a href="/#projects" class="block py-3 px-5 text-lg text-gray-600 hover:bg-gray-100">Projects</a>
+      <a href="/about" class="block py-3 px-5 text-lg text-gray-600 hover:bg-gray-100">About</a>
+      <a href="#" class="block py-3 px-5 text-lg bg-gray-700 text-white  hover:bg-gray-900 transition-all duration-500">
+        Download CV
+      </a>
+    </div>
+  </nav>
